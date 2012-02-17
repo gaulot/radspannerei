@@ -1,0 +1,19 @@
+<div id = 'customer_table'>
+  <table>
+    <tr>
+      <th>Nachname</th>
+      <th>Name</th>
+      <th>Telefon</th>
+      <th>Email</th>
+    </tr>
+
+    <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.lastname %></td>
+        <td><%= customer.name %></td>
+        <td><%= customer.phone %></td>
+        <td><%= customer.email %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

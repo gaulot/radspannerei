@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Radspannerei</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "defaults" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+  <div id="wrapper">
+    <div id="wrapper-bgtop">
+      <div id="wrapper-bgbtm">
+        <div id="header" class="container">
+          <div id="logo">
+            <%= image_tag('logo.png') %>
+          </div>
+          <div id="menu">
+            <ul class="items">
+              <li> <%= link_to_unless_current "Kunden", customers_path %> </li>
+              <li> <%= link_to_unless_current "Kundenbestellungen", new_customer_path %> </li>
+              <li> <%= link_to_unless_current "interne Bestellungen", categories_path %> </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="page" class="container">
+          <div id="content">
+            <%= yield %>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <p>Jan Nietfeld ist der coolste Typ auf der ganzen Welt</p>
+  </div>
+
+
+</body>
+</html>

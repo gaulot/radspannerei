@@ -1,0 +1,42 @@
+<div class="sheet">
+  <div class="sheet-bgtop">
+    <div class="sheet-bgbtm">
+
+      <h1>Kunden:</h1>
+
+
+
+      <div id="button">
+        <%= button_to 'Neuen Kunden anlegen', new_customer_path %>
+      </div>
+
+      <%= render :partial => 'search' %>
+
+      <div id="results">
+        <% if @customers.empty? %>
+          <p>
+            Keine Kunden gefunden. 
+          </p>
+        <% else %>
+          <% if params[:search] %>
+            <p>
+              Suchergebnisse für: 
+              <span id="search"> <%= params[:search] %> </span>
+            </p>
+          <% else %>
+            <% if params[:letter] %>
+              <p>
+                Anfangsbuchstabe: <span id="search"> <%= params[:letter] %> </span>
+              </p>
+            <% end %>
+          <% end %> 
+        <% end %>
+      </div>
+
+      <%= render :partial => 'customer_table', :locals => {:customers => @customers} %>
+
+      <%= render :partial => 'alphabet' %>
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div id="alphabet">
+  <ul>
+  <% if params[:letter] %>
+    <li>
+      <%= link_to '<', :controller => 'customers', :action => 'index', :letter => params[:letter], :direction => 'backward' %> 
+    </li>
+  <% end %>
+  <% ('A'..'Z').to_a.each do |letter| %>
+    <li>
+      <%= link_to letter, :controller => 'customers', :action => 'index', :letter => letter %>  
+    </li>
+  <% end %>
+  <% if params[:letter] %> 
+    <li> 
+      <%= link_to '>', :controller => 'customers', :action => 'index', :letter => params[:letter], :direction => 'foreward' %> 
+    </li>
+  <% end %>
+  </ul>  
+</div>
