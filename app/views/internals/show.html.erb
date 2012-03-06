@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Article:</b>
+  <%= @internal.article %>
+</p>
+
+<p>
+  <b>Order number:</b>
+  <%= @internal.order_number %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @internal.note %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @internal.amount %>
+</p>
+
+<p>
+  <b>Deliveryman:</b>
+  <%= @internal.deliveryman %>
+</p>
+
+<p>
+  <b>Filledin by:</b>
+  <%= @internal.filledin_by %>
+</p>
+
+<p>
+  <b>Order arrived:</b>
+  <%= @internal.order_arrived %>
+</p>
+
+
+<%= link_to 'Edit', edit_internal_path(@internal) %> |
+<%= link_to 'Back', internals_path %>

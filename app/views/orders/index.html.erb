@@ -1,0 +1,34 @@
+<h1>Listing orders</h1>
+
+<table>
+  <tr>
+    <th>Article</th>
+    <th>Order number</th>
+    <th>Note</th>
+    <th>Amount</th>
+    <th>Deliveryman</th>
+    <th>Filledin by</th>
+    <th>Ordered date</th>
+    <th>Arrived date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @orders.each do |order| %>
+  <tr>
+    <td><%= order.article %></td>
+    <td><%= order.order_number %></td>
+    <td><%= order.note %></td>
+    <td><%= order.amount %></td>
+    <td><%= order.deliveryman %></td>
+    <td><%= order.filledin_by %></td>
+    <td><%= order.ordered_date %></td>
+    <td><%= order.arrived_date %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Order', new_customer_order_path %>

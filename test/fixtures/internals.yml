@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  article: MyString
+  order_number: MyString
+  note: MyText
+  amount: MyString
+  deliveryman: MyString
+  filledin_by: MyString
+  order_arrived: 2012-01-12 15:22:58
+
+two:
+  article: MyString
+  order_number: MyString
+  note: MyText
+  amount: MyString
+  deliveryman: MyString
+  filledin_by: MyString
+  order_arrived: 2012-01-12 15:22:58

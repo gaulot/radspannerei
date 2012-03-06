@@ -33,7 +33,17 @@
         <% end %>
       </div>
 
-      <%= render :partial => 'customer_table', :locals => {:customers => @customers} %>
+      <div id = 'customer_table'>
+        <%= render :partial => 'customer_table', :locals => {:customers => @customers} %>
+        <div id=paginate_customers>
+          <%= will_paginate @customers, :page_links => false %> 
+        </div>
+      </div>
+      <script>
+        $(document).ready(function() {
+          $('.pagination a').attr('data-remote', 'true');
+        });
+      </script>
 
       <%= render :partial => 'alphabet' %>
       

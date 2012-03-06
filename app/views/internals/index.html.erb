@@ -1,0 +1,35 @@
+<h1>Listing internals</h1>
+
+<table>
+  <tr>
+    <th>Article</th>
+    <th>Order number</th>
+    <th>Note</th>
+    <th>Amount</th>
+    <th>Deliveryman</th>
+    <th>Filledin by</th>
+    <th>Order arrived</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @internals.each do |internal| %>
+  <tr>
+    <td><%= internal.article %></td>
+    <td><%= internal.order_number %></td>
+    <td><%= internal.note %></td>
+    <td><%= internal.amount %></td>
+    <td><%= internal.deliveryman %></td>
+    <td><%= internal.filledin_by %></td>
+    <td><%= internal.order_arrived %></td>
+    <td><%= link_to 'Show', internal %></td>
+    <td><%= link_to 'Edit', edit_internal_path(internal) %></td>
+    <td><%= link_to 'Destroy', internal, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Internal', new_internal_path %>

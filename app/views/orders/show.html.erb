@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Article:</b>
+  <%= @order.article %>
+</p>
+
+<p>
+  <b>Order number:</b>
+  <%= @order.order_number %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @order.note %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @order.amount %>
+</p>
+
+<p>
+  <b>Deliveryman:</b>
+  <%= @order.deliveryman %>
+</p>
+
+<p>
+  <b>Filledin by:</b>
+  <%= @order.filledin_by %>
+</p>
+
+<p>
+  <b>Ordered date:</b>
+  <%= @order.ordered_date %>
+</p>
+
+<p>
+  <b>Arrived date:</b>
+  <%= @order.arrived_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

@@ -1,0 +1,321 @@
+/* line 5, ../../app/assets/stylesheets/customers.css.scss */
+h1 {
+  width: 300px;
+  float: left;
+  color: #204359;
+}
+
+/* line 13, ../../app/assets/stylesheets/customers.css.scss */
+#results {
+  color: #204359;
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 1px;
+  width: 300px;
+}
+/* line 21, ../../app/assets/stylesheets/customers.css.scss */
+#results #search {
+  color: #800000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 29, ../../app/assets/stylesheets/customers.css.scss */
+#search_mask {
+  float: right;
+  width: 280px;
+  height: 60px;
+}
+/* line 34, ../../app/assets/stylesheets/customers.css.scss */
+#search_mask p {
+  font-size: 8px;
+}
+/* line 38, ../../app/assets/stylesheets/customers.css.scss */
+#search_mask form {
+  height: 41px;
+  margin: 0;
+}
+/* line 43, ../../app/assets/stylesheets/customers.css.scss */
+#search_mask fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+/* line 49, ../../app/assets/stylesheets/customers.css.scss */
+#search_mask #search {
+  width: 165px;
+  height: 17px;
+  margin-right: 5px;
+  padding: 6px 5px 3px 5px;
+  border: 1px solid #A8A8A8;
+  background: #FFFFFF;
+  text-transform: lowercase;
+  font: normal 11px Arial, Helvetica, sans-serif;
+}
+/* line 59, ../../app/assets/stylesheets/customers.css.scss */
+#search_mask #searchsubmit {
+  width: 51px;
+  height: 26px;
+  border: none;
+  background: url(img08.jpg) no-repeat left top;
+  color: #FFFFFF;
+}
+
+/* line 68, ../../app/assets/stylesheets/customers.css.scss */
+#customer_table {
+  float: left;
+  width: 850px;
+  margin-top: 25px;
+}
+/* line 73, ../../app/assets/stylesheets/customers.css.scss */
+#customer_table table {
+  cursor: pointer;
+  font-size: 12px;
+  width: 810px;
+  text-align: left;
+  border-collapse: collapse;
+  border: 0px;
+}
+/* line 81, ../../app/assets/stylesheets/customers.css.scss */
+#customer_table table th {
+  padding: 15px 10px 10px 10px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #204359;
+}
+/* line 87, ../../app/assets/stylesheets/customers.css.scss */
+#customer_table table tbody {
+  color: #90a2ad;
+  border: 4px solid transparent;
+}
+/* line 91, ../../app/assets/stylesheets/customers.css.scss */
+#customer_table table tbody tr:hover td {
+  color: #204359;
+  background: #c7d0d6;
+}
+/* line 96, ../../app/assets/stylesheets/customers.css.scss */
+#customer_table table td {
+  padding: 10px;
+  color: #90a2ad;
+  border-top: 1px dashed #fff;
+}
+/* line 103, ../../app/assets/stylesheets/customers.css.scss */
+#customer_table .pagination {
+  height: 40px;
+  font-size: 20px;
+  float: left;
+  width: 820px;
+  text-align: center;
+  padding: 15px 10px 10px 10px;
+  margin: 15px;
+}
+/* line 106, ../../app/assets/stylesheets/customers.css.scss */
+#customer_table .pagination .next_page {
+  padding: 15px 10px 10px 10px;
+  margin: 15px;
+}
+
+/* line 121, ../../app/assets/stylesheets/customers.css.scss */
+#alphabet {
+  float: left;
+  width: 850px;
+  margin-top: 30px;
+  text-align: center;
+}
+/* line 128, ../../app/assets/stylesheets/customers.css.scss */
+#alphabet ul {
+  float: left;
+  margin: 0;
+  list-style: none;
+  line-height: normal;
+}
+/* line 135, ../../app/assets/stylesheets/customers.css.scss */
+#alphabet li {
+  float: left;
+  color: #204359;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 1px;
+  padding: 20px 8px;
+}
+/* line 146, ../../app/assets/stylesheets/customers.css.scss */
+#alphabet a {
+  text-decoration: none;
+  color: #204359;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-right: 1px;
+  text-decoration: none;
+}
+/* line 155, ../../app/assets/stylesheets/customers.css.scss */
+#alphabet a:hover {
+  text-decoration: none;
+  color: green;
+}
+
+/* line 164, ../../app/assets/stylesheets/customers.css.scss */
+#customer {
+  float: right;
+}
+/* line 166, ../../app/assets/stylesheets/customers.css.scss */
+#customer h3 {
+  font-size: 13px;
+}
+/* line 169, ../../app/assets/stylesheets/customers.css.scss */
+#customer p {
+  font-size: 11px;
+  color: #90A2AD;
+}
+/* line 173, ../../app/assets/stylesheets/customers.css.scss */
+#customer a {
+  text-decoration: none;
+  font-size: 11px;
+  color: #204359;
+  float: right;
+}
+
+/* line 181, ../../app/assets/stylesheets/customers.css.scss */
+#new_order {
+  width: 400px;
+  padding-top: 25px;
+}
+/* line 184, ../../app/assets/stylesheets/customers.css.scss */
+#new_order ol {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+/* line 190, ../../app/assets/stylesheets/customers.css.scss */
+#new_order label {
+  width: 120px;
+}
+/* line 194, ../../app/assets/stylesheets/customers.css.scss */
+#new_order input, #new_order textarea {
+  width: 244px;
+}
+
+/* line 200, ../../app/assets/stylesheets/customers.css.scss */
+#orders_table {
+  float: right;
+}
+/* line 204, ../../app/assets/stylesheets/customers.css.scss */
+#orders_table table {
+  cursor: pointer;
+  font-size: 12px;
+  width: 410px;
+  text-align: left;
+  border-collapse: collapse;
+  border: 0px;
+}
+/* line 212, ../../app/assets/stylesheets/customers.css.scss */
+#orders_table table th {
+  padding: 15px 10px 10px 10px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #204359;
+}
+/* line 218, ../../app/assets/stylesheets/customers.css.scss */
+#orders_table table tbody {
+  color: #90a2ad;
+  border: 4px solid transparent;
+}
+/* line 222, ../../app/assets/stylesheets/customers.css.scss */
+#orders_table table tbody tr:hover td {
+  color: #204359;
+  background: #c7d0d6;
+}
+/* line 227, ../../app/assets/stylesheets/customers.css.scss */
+#orders_table table td {
+  padding: 10px;
+  color: #90a2ad;
+  border-top: 1px dashed #fff;
+}
+
+/* line 236, ../../app/assets/stylesheets/customers.css.scss */
+form {
+  background: none repeat scroll 0 0 #EEEEEE;
+  font: 13px;
+  margin: 20px;
+  padding: 20px 20px;
+  width: 330px;
+  font-weight: bold;
+}
+/* line 244, ../../app/assets/stylesheets/customers.css.scss */
+form p {
+  margin: 0 0 10px;
+  padding: 0;
+  color: #204359;
+  font-size: 15px;
+}
+/* line 251, ../../app/assets/stylesheets/customers.css.scss */
+form ol {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+/* line 256, ../../app/assets/stylesheets/customers.css.scss */
+form li {
+  background: none repeat scroll 0 0 #E1E1E1;
+  margin-bottom: 1px;
+  padding: 6px;
+}
+/* line 262, ../../app/assets/stylesheets/customers.css.scss */
+form label {
+  color: #204359;
+  float: left;
+  line-height: 23px;
+  margin-right: 7px;
+  text-align: right;
+  width: 70px;
+}
+/* line 270, ../../app/assets/stylesheets/customers.css.scss */
+form input, form textarea {
+  border: 1px solid #999999;
+  font: 13px Georgia,"Times New Roman",Times,serif;
+  padding: 4px;
+  width: 200px;
+  text-align: left;
+}
+/* line 277, ../../app/assets/stylesheets/customers.css.scss */
+form input#customer_pkunde {
+  width: 14px;
+}
+/* line 281, ../../app/assets/stylesheets/customers.css.scss */
+form input:focus, form textarea:focus {
+  background: none repeat scroll 0 0 #E3F1F1;
+  border: 1px solid #666666;
+}
+/* line 286, ../../app/assets/stylesheets/customers.css.scss */
+form .button {
+  background: url("images/css-form-send.gif") no-repeat scroll 8px 50% #003366;
+  border: medium none;
+  border-radius: 15% 15% 15% 15%;
+  color: #FFFFFF;
+  cursor: pointer;
+  margin-left: 120px;
+  padding: 4px 28px 4px 28px;
+  width: 71px;
+}
+
+/* line 300, ../../app/assets/stylesheets/customers.css.scss */
+#new_customer #right_side {
+  float: right;
+}
+/* line 303, ../../app/assets/stylesheets/customers.css.scss */
+#new_customer #left_side {
+  float: left;
+  position: relative;
+  top: 183px;
+  left: 91px;
+}
+/* line 309, ../../app/assets/stylesheets/customers.css.scss */
+#new_customer #left_corner {
+  float: left;
+}
+
+/* line 317, ../../app/assets/stylesheets/customers.css.scss */
+#newOrder {
+  float: left;
+}

@@ -1,0 +1,78 @@
+<div class="sheet">
+  <div class="sheet-bgtop">
+    <div class="sheet-bgbtm">
+
+      <h1><%="#{@customer.name} #{@customer.lastname}:"%></h1>
+
+      <div id="showCustomer">
+
+        <p id="notice"><%= notice %></p>
+
+        <div id="customer">
+          <%= render :partial => 'customer', :locals => {:customer => @customer} %>
+          <%= link_to 'verändern', edit_customer_path(@customer) %> 
+        </div>
+
+      </div>
+
+
+
+      <div id="new_order">
+        <%@order = Order.new%>
+        <ol>
+          <%= form_for [@customer, @order] do |f| %>
+            <p>Neue Bestellung aufnehmen: </p> </br>
+            <li>
+              <%=f.label :Artikel %>
+              <%= f.text_field :article %>
+            </li>
+            <li>
+              <%=f.label :Bestellnummer %>
+              <%= f.text_field :order_number %>
+            </li>
+            <li>
+              <%=f.label :Anzahl %>
+              <%= f.text_field :amount %>
+            </li>
+            <li>
+              <%=f.label :Aufgenommen_von %>
+              <%= f.text_field :filledin_by %>
+            </li>
+            <li>
+              <%=f.label :Bemerkung %>
+              <%= f.text_area :note %>
+            </li>
+            <li>
+              <%=f.label :Grosshaendler %>
+              <%= f.text_field :deliveryman %>
+            </li>
+            <li id="send">
+              <%= f.submit "Bestellung hinzufügen", :class => 'button' %>
+            </li>
+
+          <% end %>
+        <ol>
+      </div>
+
+      <div id="customer_orders">
+        <h2>Vorhandene Bestellungen:<h2>  
+          <div id = 'orders_table'>
+            <table>
+              <tr>
+                <th>Artikel</th>
+                <th>Status</th>
+              </tr>
+
+              <% @customer.orders.each do |order| %>
+                <tr onclick="location.href='<%= order_path order %>'"  >
+                  <td><%= order.article %></td>
+                  <td><%= order.created_at %></td>
+                </tr>
+              <% end %>
+          </table>
+          </div>
+      </div>
+
+    </div>
+  </div>
+</div>
