@@ -38,6 +38,7 @@ h1{
   form{
     height: 41px;
     margin: 0;
+    background: none;
   }
 
   fieldset {
@@ -100,6 +101,23 @@ h1{
     }
   }
 
+  #new_customer{
+    float: left;
+    width: 150px;
+    form{
+      width: 150px;
+      padding: 0px;
+      background: none;
+      input{
+        width: 150px;
+        height: 26px;
+        border: none;
+        background: url(img09.jpg) no-repeat left top;
+        color: #FFFFFF;
+      }
+    }
+  }
+
   .pagination{
     height: 40px;
     font-size: 20px;
@@ -108,8 +126,9 @@ h1{
       margin: 15px;
 
     }
+    text-decoration:  none;
     float: left;
-    width: 820px;
+    width: 300px;
     text-align: center;
     padding: 15px 10px 10px 10px;
     margin: 15px;
@@ -161,14 +180,51 @@ h1{
 
 // customers show
 
-#customer{
-  float: right;
-    h3{
-    font-size: 13px;
+#customer_show{
+  h1{width: 400px; 
+     margin: 0px;
+   }
+  #address{
+    float: right;
+    p{
+      font-size: 11px;
+      color: #90A2AD;
+      line-height: 0px;
+    }
   }
-  p{
-    font-size: 11px;
-    color: #90A2AD;
+  #new_order{
+    float: left;
+    width: 400px;
+    padding-top: 70px;
+    ol {
+      list-style: none outside none;
+      margin: 0;
+      padding: 0;
+    }
+
+    label {
+      width: 120px;
+    }
+
+    input, textarea {
+      width: 244px;
+    }
+    form{
+      padding: 0px;
+      margin: 0px;
+    }
+    p{
+      padding-left: 18px;
+      padding-top: 10px;
+    }
+  }
+  #customer_orders{
+    float: left;
+    width: 350px;
+    padding: 0 50px 50px;
+    h2{
+      color: #204359;
+    }
   }
   a{
     text-decoration : none;
@@ -178,33 +234,14 @@ h1{
   }
 }
 
-#new_order{
-  width: 400px;
-  padding-top: 25px;
-  ol {
-    list-style: none outside none;
-    margin: 0;
-    padding: 0;
-  }
-
-  label {
-    width: 120px;
-  }
-
-  input, textarea {
-    width: 244px;
-  }
-
-}
 
 #orders_table{
-
-  float: right;
+  float: left;
 
   table{
     cursor: pointer;
     font-size: 12px;
-    width: 410px;
+    width: 390px;
     text-align: left;
     border-collapse: collapse;
     border: 0px;
@@ -284,7 +321,6 @@ form{
   }
 
   .button{
-    background: url("images/css-form-send.gif") no-repeat scroll 8px 50% #003366;
     border: medium none;
     border-radius: 15% 15% 15% 15%;
     color: #FFFFFF;
@@ -299,6 +335,24 @@ form{
 #new_customer{
   #right_side{
     float: right;
+    label{
+      padding-right: 10px;
+    }
+    input{
+      width: 218px;
+    }
+    #send{
+      .button{
+        border: medium none;
+        border-radius: 15% 15% 15% 15%;
+        color: #FFFFFF;
+        cursor: pointer;
+        margin-left: 120px;
+        padding: 4px 28px 4px 28px;
+        width: 71px;
+        background: url(img10.jpg) no-repeat left top;
+      }
+    }
   }
   #left_side{
     float: left;

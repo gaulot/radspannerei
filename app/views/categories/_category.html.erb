@@ -1,0 +1,14 @@
+<li>
+<% if links %>
+<%= link_to category.name, category_path(category.id), :method => :get, :remote => true%>
+<% else %>
+  <%= category.name %>
+<% end %>
+  <% if category.children.exists? %>
+    <ul>
+      <% category.children.each do |child| %>
+        <%= render :partial => "category", :locals => { :category => child, :links => links  } %>
+      <% end %>
+    </ul>
+  <% end %>
+</li>

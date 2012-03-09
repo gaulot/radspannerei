@@ -1,17 +1,19 @@
 Radspannerei::Application.routes.draw do
   
-  resources :categories do
-    resources :internals
-  end
-
-  #match 'orders' => 'orders#index', :via => :get
-
-  resources :customers do
-    resources :orders
-  end
+  resources :categories 
+  resources :internals
+  
 
   resources :orders
 
+  resources :dasisteintests
+
+  resources :customers #do
+    #resources :dasisteintests
+    #resources :orders
+  #end
+
+  
   
   #resources :customers do
   #  resources :orders

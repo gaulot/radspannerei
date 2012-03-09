@@ -6,9 +6,7 @@
 
 
 
-      <div id="button">
-        <%= button_to 'Neuen Kunden anlegen', new_customer_path %>
-      </div>
+
 
       <%= render :partial => 'search' %>
 
@@ -35,15 +33,14 @@
 
       <div id = 'customer_table'>
         <%= render :partial => 'customer_table', :locals => {:customers => @customers} %>
+
+        <div id="new_customer">
+          <%= button_to 'Neuen Kunden anlegen', new_customer_path, :method => :get%>
+        </div>
         <div id=paginate_customers>
           <%= will_paginate @customers, :page_links => false %> 
         </div>
       </div>
-      <script>
-        $(document).ready(function() {
-          $('.pagination a').attr('data-remote', 'true');
-        });
-      </script>
 
       <%= render :partial => 'alphabet' %>
       

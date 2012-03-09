@@ -1,20 +1,20 @@
-  <table>
-    <tr>
-      <th>Nachname</th>
-      <th>Name</th>
-      <th>Telefon</th>
-      <th>Email</th>
-      <th>Anz. Best.</th>
-    </tr>
+<table>
+  <tr>
+    <th>Nachname</th>
+    <th>Name</th>
+    <th>Telefon</th>
+    <th>Email</th>
+    <th>Anz. Best.</th>
+  </tr>
 
-    <% @customers.each do |customer| %>
-      <tr onclick="location.href='<%= customer_path customer %>'"  >
-        <td><%= customer.lastname %></td>
-        <td><%= customer.name %></td>
-        <td><%= customer.phone %></td>
-        <td><%= customer.email %></td>
-        <td><%= customer.orders.size unless customer.orders.nil? %></td>
-      </tr>
-    <% end %>
-  </table>
+  <% @customers.each do |customer| %>
+    <tr onclick="location.href='<%= customer_path customer %>'"  >
+      <td><%= customer.lastname %></td>
+      <td><%= customer.name %></td>
+      <td><%= customer.phone %></td>
+      <td><%= customer.email %></td>
+      <td><%= customer.orders.size unless customer.orders.nil? %></td>
+    </tr>
+  <% end %>
+</table>
 

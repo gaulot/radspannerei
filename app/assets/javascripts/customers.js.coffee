@@ -5,7 +5,7 @@
 #
 #
 #
-$ ->
-  $(".pagination a").click -> 
-    $.get(this.href, null, null, "script") 
-    return false
+#$ ->
+#  $(".pagination a").click -> 
+#    $.get(this.href, null, null, "script") 
+#    return false

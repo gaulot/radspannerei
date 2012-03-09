@@ -44,7 +44,7 @@ class Customer < ActiveRecord::Base
 
   def self.search(search, page, letter)
     search_text = letter.blank? ? "%#{search}%" : "#{letter}%"
-    if letter || search 
+    if(letter || search)
       paginate(:page => page, :conditions => ['lastname LIKE ?', search_text], :order => 'lastname')
     else
       paginate(:per_page => 8, :page => page, :conditions => ['lastname LIKE ?', search_text], :order => 'lastname')

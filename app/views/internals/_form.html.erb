@@ -16,6 +16,10 @@
     <%= f.text_field :article %>
   </div>
   <div class="field">
+    <%= f.label :category %><br />
+    <%= select_tag 'category_id', options_for_select(nested_set_options(Category) {|i| "#{'-' * i.level} #{i.name}" } ) %>
+    </div>
+  <div class="field">
     <%= f.label :order_number %><br />
     <%= f.text_field :order_number %>
   </div>

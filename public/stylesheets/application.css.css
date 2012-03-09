@@ -35,21 +35,21 @@ body {
 .container {
   width: 940px;
   margin: 0px auto;
+  padding-top: 0px;
 }
 
-/* line 36, ../../app/assets/stylesheets/application.css.scss */
+/* line 37, ../../app/assets/stylesheets/application.css.scss */
 #header {
   margin: 0 auto;
   padding: 0px 30px;
 }
 
-/* line 41, ../../app/assets/stylesheets/application.css.scss */
+/* line 42, ../../app/assets/stylesheets/application.css.scss */
 #logo {
   float: left;
-  width: 350px;
-  margin: 0;
-  padding: 0;
-  color: #204359;
+  width: 150px;
+  margin: 0px;
+  padding-top: 52px;
 }
 
 /* line 49, ../../app/assets/stylesheets/application.css.scss */
@@ -97,7 +97,7 @@ body {
 #content {
   float: left;
   width: 930px;
-  padding: 30px 0px 0px 0px;
+  padding: 0px;
 }
 /* line 98, ../../app/assets/stylesheets/application.css.scss */
 #content .sheet {
@@ -120,7 +120,7 @@ body {
 #footer {
   height: 200px;
   margin: 0 auto;
-  background: url(images/img04.jpg) no-repeat center top;
+  background: url(img04.jpg) no-repeat center top;
   font-family: Arial, Helvetica, sans-serif;
 }
 /* line 121, ../../app/assets/stylesheets/application.css.scss */

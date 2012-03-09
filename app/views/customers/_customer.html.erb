@@ -1,10 +1,12 @@
-<p>
-  <%= customer.name %>
-</p>
+<% unless just_address %>
+  <p>
+    <%= customer.name %>
+  </p>
 
-<p>
-  <%= customer.lastname %>
-</p>
+  <p>
+    <%= customer.lastname %>
+  </p>
+<% end %>
 
 <p>
   <%= customer.street %>
@@ -22,6 +24,8 @@
   <%= customer.email %>
 </p>
 
-<% if customer.pkunde %>
-  <p>ein p-kunde</p>
+<% unless just_address %>
+  <% if customer.pkunde %>
+    <p>ein p-kunde</p>
+  <% end %>
 <% end %>

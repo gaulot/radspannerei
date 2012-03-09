@@ -40,7 +40,9 @@ class InternalsController < ApplicationController
   # POST /internals
   # POST /internals.json
   def create
+    category = Category.find(params[:category_id])
     @internal = Internal.new(params[:internal])
+    category.internals << @internal
 
     respond_to do |format|
       if @internal.save

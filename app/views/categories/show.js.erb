@@ -1,0 +1,3 @@
+alert("hallo");
+
+$("#items").html('<%= escape_javascript( render :partial => 'items', :locals => { :items => @category.internals } ) %>')

@@ -1,0 +1,38 @@
+<h1>Kategorien</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Oberkategorie</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @categories.each do |category| %>
+  <tr>
+    <td><%= category.name %></td>
+    <td><%= category.parent_id %></td>
+    <td><%= link_to 'Show', category %></td>
+    <td><%= link_to 'Edit', edit_category_path(category) %></td>
+    <td><%= link_to 'Destroy', category, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<div id="listContainer">
+  <ul id="expList">
+    <% Category.roots.each do |category| %>
+      <%= render :partial => "category", :locals => { :category => category, :links => true } %>
+    <% end %>
+  </ul>
+</div>
+
+<div id="items">
+  hier sind die items
+</div>
+
+
+<%= link_to 'New Category', new_category_path %>
