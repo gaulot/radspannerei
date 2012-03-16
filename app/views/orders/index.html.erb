@@ -1,34 +1,64 @@
-<h1>Listing orders</h1>
+<div class="sheet">
+  <div class="sheet-bgtop">
+    <div class="sheet-bgbtm">
 
-<table>
-  <tr>
-    <th>Article</th>
-    <th>Order number</th>
-    <th>Note</th>
-    <th>Amount</th>
-    <th>Deliveryman</th>
-    <th>Filledin by</th>
-    <th>Ordered date</th>
-    <th>Arrived date</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+      <h1>Bestellungen:</h1>
 
-<% @orders.each do |order| %>
-  <tr>
-    <td><%= order.article %></td>
-    <td><%= order.order_number %></td>
-    <td><%= order.note %></td>
-    <td><%= order.amount %></td>
-    <td><%= order.deliveryman %></td>
-    <td><%= order.filledin_by %></td>
-    <td><%= order.ordered_date %></td>
-    <td><%= order.arrived_date %></td>
-  </tr>
-<% end %>
-</table>
+      <div id="search_mask">
+        <%= form_tag orders_path, :id => "search_form", :method => 'get' do %>
+          <div>
+            <%= select_tag(:status,  options_for_select(Order::STATES.collect {|v,i| [v, Order::STATES.index(v)] }, :selected => params[:status]), :onchange => 'document.forms[0].submit()') %>
+            <%= text_field_tag :search,  params[:search]%>
+            <%= submit_tag "Go", :id => 'searchsubmit', :name => nil %>
+          </div>
+          <p> (Suchen nach: Artikelname) </p>
+        <% end %>
+      </div>
+
+      
+      <div id="results">
+        <% if @orders.empty? %>
+          <p>
+            Keine Bestellungen gefunden. 
+          </p>
+        <% else %>
+          <p>
+            Suchergebnisse für: 
+            <span id="search"> <%= params[:search] %> </span>
+          </p>
+        <% end %> 
+      </div>
+
+      <div id = 'customer_table'>
+
+        <table>
+          <tr>
+            <th>Artikel</th>
+            <th>Anzahl</th>
+            <th>Grosshaendler</th>
+            <th>Status</th>
+          </tr>
+
+          <% @orders.each do |order| %>
+            <tr onclick="location.href='<%= order_path order %>'" >
+              <td><%= order.article %></td>
+              <td><%= order.amount %></td>
+              <td><%= order.deliveryman %></td>
+              <td><%= order.status_as_string %></td>
+            </tr>
+          <% end %>
+        </table>
+
+        <div id=paginate_customers>
+          <%= will_paginate @orders %> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 <br />
 
-<%= link_to 'New Order', new_customer_order_path %>

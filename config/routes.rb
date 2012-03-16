@@ -4,14 +4,14 @@ Radspannerei::Application.routes.draw do
   resources :internals
   
 
-  resources :orders
+  resources :orders, :only => [:index, :show]
 
   resources :dasisteintests
 
-  resources :customers #do
+  resources :customers do
     #resources :dasisteintests
-    #resources :orders
-  #end
+    resources :orders
+  end
 
   
   

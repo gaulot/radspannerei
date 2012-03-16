@@ -1,0 +1,37 @@
+de:
+  customer:
+    index:
+      customer: "Kunde"
+      lastname: "Nachname"
+      firstname: "Vorname"
+      telefon: "Telefon"
+      email: "Email" 
+      amount: "Anz. Best."
+      found_no_customers: "Keine Kunden gefunden."
+      search_results: "Suchergebnisse für"
+      first_letter: "Anfangsbuchstabe"
+      search: "suchen"
+      search_term: "(Suchen nach: Nachname)"
+      new_customer: "Neuen Kunden anlegen"
+    show:
+      add_new_order: "Neue Bestellung aufnehmen:"
+      article: "Artikel"
+      number: "Bestellnummer"
+      amount: "Anzahl"
+      sign: "Kürzel"
+      note: "Bemerkung"
+      delivery: "Grosshändler"
+      edit: "verändern"
+      customer_orders: "Vorhandene Bestellungen:"
+      state: "Status"
+      add_order: "Bestellung hinzufügen"
+  order:
+    model:
+     states:
+       unprocessed: "unbearbeitet"
+       ordered: "bestellt"
+       arrived: "angekommen"
+       picked_up: "abgeholt"
+       undefined: "unklar"
+ 
+

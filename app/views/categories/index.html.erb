@@ -1,38 +1,49 @@
-<h1>Kategorien</h1>
+<% content_for :categories do %>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Oberkategorie</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <div class="sheet">
+    <div class="sheet-bgtop">
+      <div class="sheet-bgbtm">
 
-<% @categories.each do |category| %>
-  <tr>
-    <td><%= category.name %></td>
-    <td><%= category.parent_id %></td>
-    <td><%= link_to 'Show', category %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+        <div id="categories_list">
+          <h1>Kategorien verwalten</h1>
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Oberkategorie</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+
+            <% @categories.each do |category| %>
+              <tr>
+                <td><%= category.name %></td>
+                <td><%= category.parent ? category.parent.name : "hoechste Kategorie" %></td>
+                <td><%= link_to 'Bestellungen', category %></td>
+                <td><%= link_to 'Veraendern', edit_category_path(category) %></td>
+                <td><%= link_to 'Loeschen', category, confirm: 'Are you sure?', method: :delete %></td>
+              </tr>
+            <% end %>
+          </table>
+
+        </div>
+
+
+        <div id="listContainer">
+          <h1>Kategorien</h1>
+          <ul id="expList">
+            <% Category.roots.each do |category| %>
+              <%= render :partial => "category", :locals => { :category => category, :links => true } %>
+            <% end %>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 <% end %>
-</table>
 
-<br />
-
-<div id="listContainer">
-  <ul id="expList">
-    <% Category.roots.each do |category| %>
-      <%= render :partial => "category", :locals => { :category => category, :links => true } %>
-    <% end %>
-  </ul>
-</div>
-
-<div id="items">
-  hier sind die items
-</div>
-
-
-<%= link_to 'New Category', new_category_path %>
+     

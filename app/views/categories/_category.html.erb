@@ -1,6 +1,12 @@
 <li>
 <% if links %>
-<%= link_to category.name, category_path(category.id), :method => :get, :remote => true%>
+  <%= link_to category.name, category_path(category.id), :method => :get, :remote => true%>
+  <div id="links">
+    <%= link_to 'Bestellungen', category %>
+    <%= link_to 'Veraendern', edit_category_path(category) %>
+    <%= link_to 'Loeschen', category, confirm: 'Are you sure?', method: :delete %>
+  </div>
+
 <% else %>
   <%= category.name %>
 <% end %>

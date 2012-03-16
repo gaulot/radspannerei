@@ -1,0 +1,37 @@
+en:
+  customer:
+    index:
+      customer: "Customer"
+      lastname: "Lastname"
+      firstname: "Firstname"
+      telefon: "Phone"
+      email: "Email"
+      amount: "Amount"
+      found_no_customers: "No orders found."
+      search_results: "Search results for:"
+      first_letter: "First letter:"
+      search: "search"
+      search_term: "(search term: lastname)"
+      new_customer: "Create New Customer"
+    show:
+      add_new_order: "Add new order:"
+      article: "Article"
+      number: "Order Number"
+      amount: "Amount"
+      sign: "Sign"
+      note: "Note"
+      delivery: "Wholeseller"
+      edit: "edit"
+      customer_orders: "Existing Orders:"
+      state: "Status"
+      add_order: "Add Order"
+  order:
+    model:
+      states:
+        unprocessed: "unprocessed"
+        ordered: "ordered"
+        arrived: "arrived"
+        picked_up: "picked up"
+        undefined: "undefined"
+        unprocessed: "asdasd"
+ 

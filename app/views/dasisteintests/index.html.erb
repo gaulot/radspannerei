@@ -1,0 +1,23 @@
+<h1>Listing dasisteintests</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dasisteintests.each do |dasisteintest| %>
+  <tr>
+    <td><%= dasisteintest.name %></td>
+    <td><%= link_to 'Show', dasisteintest %></td>
+    <td><%= link_to 'Edit', edit_dasisteintest_path(dasisteintest) %></td>
+    <td><%= link_to 'Destroy', dasisteintest, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dasisteintest', new_dasisteintest_path %>

@@ -2,10 +2,7 @@
   <div class="sheet-bgtop">
     <div class="sheet-bgbtm">
 
-      <h1>Kunden:</h1>
-
-
-
+    <h1><%=t :customer, :scope => [:customer, :index] %></h1>
 
 
       <%= render :partial => 'search' %>
@@ -13,18 +10,19 @@
       <div id="results">
         <% if @customers.empty? %>
           <p>
-            Keine Kunden gefunden. 
+            <%=t :customer_orders, :scope => [:customer, :index] %> 
           </p>
         <% else %>
           <% if params[:search] %>
             <p>
-              Suchergebnisse für: 
+              <%=t :search_results, :scope => [:customer, :index] %> 
               <span id="search"> <%= params[:search] %> </span>
             </p>
           <% else %>
             <% if params[:letter] %>
               <p>
-                Anfangsbuchstabe: <span id="search"> <%= params[:letter] %> </span>
+                <%=t :first_letter, :scope => [:customer, :index] %> 
+                <span id="search"> <%= params[:letter] %> </span>
               </p>
             <% end %>
           <% end %> 
@@ -35,7 +33,7 @@
         <%= render :partial => 'customer_table', :locals => {:customers => @customers} %>
 
         <div id="new_customer">
-          <%= button_to 'Neuen Kunden anlegen', new_customer_path, :method => :get%>
+          <%= button_to t(:new_customer, :scope => [:customer, :index]), new_customer_path, :method => :get%>
         </div>
         <div id=paginate_customers>
           <%= will_paginate @customers, :page_links => false %> 

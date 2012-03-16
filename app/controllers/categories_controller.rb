@@ -17,7 +17,8 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
-    @category = Category.find(params[:id])
+    @category  = Category.find(params[:id])
+    @internals = @category.all_internals
 
     respond_with @category, :location => category_url
 
