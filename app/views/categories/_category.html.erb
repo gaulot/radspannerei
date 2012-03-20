@@ -1,20 +1,17 @@
 <li>
+
 <% if links %>
   <%= link_to category.name, category_path(category.id), :method => :get, :remote => true%>
-  <div id="links">
-    <%= link_to 'Bestellungen', category %>
-    <%= link_to 'Veraendern', edit_category_path(category) %>
-    <%= link_to 'Loeschen', category, confirm: 'Are you sure?', method: :delete %>
-  </div>
-
 <% else %>
-  <%= category.name %>
+  <%= link_to(category.name, category_path(category)) %>
 <% end %>
-  <% if category.children.exists? %>
-    <ul>
-      <% category.children.each do |child| %>
-        <%= render :partial => "category", :locals => { :category => child, :links => links  } %>
-      <% end %>
-    </ul>
-  <% end %>
+
+<% if category.children.exists? %>
+  <ul>
+    <% category.children.each do |child| %>
+      <%= render :partial => "category", :locals => { :category => child, :links => links  } %>
+    <% end %>
+  </ul>
+<% end %>
+
 </li>

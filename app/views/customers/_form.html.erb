@@ -12,39 +12,39 @@
       </div>
     <% end %>
 
-    <p>Kontaktdaten</p>
+    <p> <%= t :contact_details, :scope => [:customer, :new] %> </p>
 
     <ol>
       <li>
-        <%= f.label :Nachname %>
+        <%= f.label t(:lastname, :scope => [:customer, :new]) %>
         <%= f.text_field :lastname %>
       </li>
       <li>
-        <%= f.label :Vorname %>
+        <%= f.label t(:firstname, :scope => [:customer, :new]) %>
         <%= f.text_field :name %>
       </li>
       <li>
-        <%= f.label :Strasse %>
+      <%= f.label t(:street, :scope => [:customer, :new]) %>
         <%= f.text_field :street %>
       </li>
       <li>
-        <%= f.label :Stadt %>
+        <%= f.label t(:city, :scope => [:customer, :new]) %>
         <%= f.text_field :city %>
       </li>
       <li>
-        <%= f.label :Telefon %>
+        <%= f.label t(:phone, :scope => [:customer, :new]) %>
         <%= f.text_field :phone %>
       </li>
       <li>
-        <%= f.label :email %>
+        <%= f.label t(:email, :scope => [:customer, :new]) %>
         <%= f.text_field :email %>
       </li>
       <li>
-        <%= f.label :P_Kunde %>
+        <%= f.label t(:p_customer, :scope => [:customer, :new]) %>
         <%= f.check_box :pkunde %>
       </li>
       <li id="send">
-        <%= f.submit "Speichern", :class => 'button' %>
+        <%= f.submit t(:save, :scope => [:customer, :new]), :class => 'button' %>
       </li>
     </ol>
   <% end %>

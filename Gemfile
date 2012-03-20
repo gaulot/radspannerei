@@ -2,6 +2,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
 
+gem 'json'
+
+
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
@@ -24,6 +27,8 @@ gem 'jquery-rails'
 gem 'therubyracer'
 
 gem 'awesome_nested_set'
+
+gem 'localized_country_select'
 
 
 # To use ActiveModel has_secure_password
@@ -52,5 +57,6 @@ group :test, :development do
   gem 'database_cleaner'
   gem 'rails3-generators'
   gem "factory_girl_rails", "~> 1.2"
+  gem 'rspec-rails'
   
 end

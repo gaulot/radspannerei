@@ -4,13 +4,12 @@
 
     <h1><%=t :customer, :scope => [:customer, :index] %></h1>
 
-
       <%= render :partial => 'search' %>
 
       <div id="results">
         <% if @customers.empty? %>
           <p>
-            <%=t :customer_orders, :scope => [:customer, :index] %> 
+            <%=t :found_no_customers, :scope => [:customer, :index] %> 
           </p>
         <% else %>
           <% if params[:search] %>

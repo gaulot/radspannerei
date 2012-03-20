@@ -14,10 +14,16 @@
     <div id="wrapper-bgtop">
       <div id="wrapper-bgbtm">
         <div id="header" class="container">
+          <% if params[:locale] == "de" %>
+            <%= link_to("Englisch", :locale => "en") %>
+          <% else %>
+            <%= link_to("Deutsch", :locale => "de") %>
+          <% end %>
           <div id="logo">
             <%= image_tag('logo.png') %>
           </div>
           <div id="menu">
+            
             <ul class="items">
               <li> <%= link_to_unless_current "Kunden", customers_path %> </li>
               <li> <%= link_to_unless_current "Kundenbestellungen", new_customer_path %> </li>

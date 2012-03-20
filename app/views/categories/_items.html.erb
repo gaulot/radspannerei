@@ -1,7 +1,17 @@
-djjjjjkjsnbkjndkjcnkjsndjkcnskjdcnskjdcnjkdsn
+<table>
+  <tr>
+    <th>Artikel</th>
+    <th>Grosshaendler</th>
+    <th>Anzahl</th>
+    <th>Status</th>
+  </tr>
 
-
-jo
-<%= items.each do |item| %>
-  hallo
-<% end %>
+  <% @internals.each do |internal| %>
+    <tr onclick="location.href='<%= category_internal_path(@category, internal) %>'"  >
+      <td><%= internal.article %></td>
+      <td><%= internal.deliveryman%></td>
+      <td><%= internal.amount%></td>
+      <td><%= internal.status_as_string%></td>
+    </tr>
+  <% end %>
+</table>

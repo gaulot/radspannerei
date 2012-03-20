@@ -1,25 +1,40 @@
-<p id="notice"><%= notice %></p>
+<% content_for :categories do %>
 
-<p>
-  <b>Name:</b>
-  <%= @category.name %>
-</p>
+  <div class="sheet">
+    <div class="sheet-bgtop">
+      <div class="sheet-bgbtm">
 
-<p>
-  <b>Parent:</b>
-  <%= @category.parent_id %>
-</p>
+        <div id="categories_menu">
+          <h1>Kategorien</h1>
+          <ul id="expList">
+            <% Category.roots.each do |category| %>
+              <%= render :partial => "category", :locals => { :category => category, :links => false } %>
+            <% end %>
+          </ul>
+        </div>
 
-<p>
-  <b>Depth:</b>
-  <%= @category.depth %>
-  </p>
+        <p id="notice"><%= notice %></p>
 
+        <div id="items">
+          <h1>Interne Bestellungen</h1>
+          <p>
+            Kategorien:
+            <% @category.self_and_ancestors.each_with_index do |ancester, i| %>
+              <% unless i == 0 %>
+                ->
+              <% end %>
+              <%= ancester.name %>  
+            <% end %>
+          </p>
+          <%= render :partial => 'items' %>
+        </div>
 
-<div id="items">
-  <%= render :partial => 'items', :locals => { :items => @category.internals } %>
-</div>
+        <div id="">
+          <%=link_to "Neue Bestellung", new_category_internal_path(@category) %>
+        </div>
 
+      </div>
+    </div>
+  </div>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+ <% end %>

@@ -1,12 +1,12 @@
 Radspannerei::Application.routes.draw do
   
-  resources :categories 
-  resources :internals
+  resources :categories do
+    resources :internals
+  end
   
 
   resources :orders, :only => [:index, :show]
 
-  resources :dasisteintests
 
   resources :customers do
     #resources :dasisteintests

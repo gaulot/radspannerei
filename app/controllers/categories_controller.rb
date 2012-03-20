@@ -20,12 +20,16 @@ class CategoriesController < ApplicationController
     @category  = Category.find(params[:id])
     @internals = @category.all_internals
 
-    respond_with @category, :location => category_url
+    @internals.each do |i|
+      puts i.inspect
+    end
 
-    #respond_to do |format|
-    #  format.html # show.html.erb
-    #  format.json { render json: @category, :location => category_url }
-    #end
+    #respond_with @category, :location => category_url
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @category, :location => category_url }
+    end
   end
 
   # GET /categories/new

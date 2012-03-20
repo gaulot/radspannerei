@@ -10,6 +10,7 @@ class Order < ActiveRecord::Base
             I18n.t(:undefined, :scope => [:order, :model, :states])]
 
   def status_as_string
+    puts status
     case self.status
       when 1 
         STATES[0]

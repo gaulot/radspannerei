@@ -1,7 +1,7 @@
 de:
   customer:
     index:
-      customer: "Kunde"
+      customer: "Kunden"
       lastname: "Nachname"
       firstname: "Vorname"
       telefon: "Telefon"
@@ -25,6 +25,17 @@ de:
       customer_orders: "Vorhandene Bestellungen:"
       state: "Status"
       add_order: "Bestellung hinzufügen"
+    new:
+      contact_details: "Kontakt"
+      new_customer: "Neuer Kunde"
+      lastname: "Nachname"
+      firstname: "Vorname"
+      street: "Strasse"
+      city: "Stadt"
+      phone: "Telefon"
+      email: "Email"
+      p_customer: "P-Kunde"
+      save: "Speichern"
   order:
     model:
      states:

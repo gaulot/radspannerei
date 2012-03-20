@@ -1,0 +1,105 @@
+/* line 5, ../../app/assets/stylesheets/categories.css.scss */
+#categories_list {
+  float: left;
+}
+
+/* line 10, ../../app/assets/stylesheets/categories.css.scss */
+#categories_menu {
+  float: left;
+  margin-top: 15px;
+  width: 370px;
+  /* Collapsed state for list element */
+  /* Expanded state for list element
+  /* NOTE: This class must be located UNDER the collapsed one */
+}
+/* line 15, ../../app/assets/stylesheets/categories.css.scss */
+#categories_menu h1 {
+  width: 370px;
+}
+/* line 19, ../../app/assets/stylesheets/categories.css.scss */
+#categories_menu a:link {
+  text-decoration: none;
+  text-underline: none;
+}
+/* line 24, ../../app/assets/stylesheets/categories.css.scss */
+#categories_menu a:hover {
+  color: green;
+  background-color: transparent;
+}
+/* line 30, ../../app/assets/stylesheets/categories.css.scss */
+#categories_menu ul, #categories_menu li {
+  list-style: none;
+  margin: 0;
+  padding: 2px;
+  cursor: pointer;
+}
+/* line 36, ../../app/assets/stylesheets/categories.css.scss */
+#categories_menu #expList p:hover {
+  background-color: #121212;
+}
+/* line 39, ../../app/assets/stylesheets/categories.css.scss */
+#categories_menu li {
+  line-height: 140%;
+  text-indent: 0px;
+  background-position: 1px 8px;
+  padding-left: 20px;
+  background-repeat: no-repeat;
+}
+/* line 48, ../../app/assets/stylesheets/categories.css.scss */
+#categories_menu #expList .collapsed {
+  background-image: url(../img/collapsed.png);
+}
+/* line 53, ../../app/assets/stylesheets/categories.css.scss */
+#categories_menu #expList .expanded {
+  background-image: url(../img/expanded.png);
+}
+
+/* line 59, ../../app/assets/stylesheets/categories.css.scss */
+#items {
+  float: left;
+  width: 475px;
+}
+/* line 63, ../../app/assets/stylesheets/categories.css.scss */
+#items h1 {
+  width: 475px;
+}
+/* line 67, ../../app/assets/stylesheets/categories.css.scss */
+#items p {
+  font-size: 10;
+}
+/* line 71, ../../app/assets/stylesheets/categories.css.scss */
+#items table {
+  cursor: pointer;
+  font-size: 12px;
+  width: 485px;
+  text-align: left;
+  border-collapse: collapse;
+  border: 0px;
+}
+/* line 79, ../../app/assets/stylesheets/categories.css.scss */
+#items table th {
+  padding: 15px 10px 10px 10px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #204359;
+}
+/* line 85, ../../app/assets/stylesheets/categories.css.scss */
+#items table tbody {
+  color: #90a2ad;
+  border: 4px solid transparent;
+}
+/* line 89, ../../app/assets/stylesheets/categories.css.scss */
+#items table tbody tr:hover td {
+  color: #204359;
+  background: #c7d0d6;
+}
+/* line 94, ../../app/assets/stylesheets/categories.css.scss */
+#items table td {
+  padding: 10px;
+  color: #90a2ad;
+  border-top: 1px dashed #fff;
+}
+/* line 99, ../../app/assets/stylesheets/categories.css.scss */
+#items table .collapsed {
+  background-image: url(arrow.png);
+}

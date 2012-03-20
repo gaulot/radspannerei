@@ -1,4 +1,4 @@
-<%= form_for(@internal) do |f| %>
+<%= form_for([@category, @internal]) do |f| %>
   <% if @internal.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@internal.errors.count, "error") %> prohibited this internal from being saved:</h2>

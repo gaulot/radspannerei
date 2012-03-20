@@ -24,7 +24,7 @@
     <td><%= internal.filledin_by %></td>
     <td><%= internal.order_arrived %></td>
     <td><%= link_to 'Show', internal %></td>
-    <td><%= link_to 'Edit', edit_internal_path(internal) %></td>
+    <td><%= link_to 'Edit', edit_category_internal_path(internal) %></td>
     <td><%= link_to 'Destroy', internal, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
@@ -32,4 +32,4 @@
 
 <br />
 
-<%= link_to 'New Internal', new_internal_path %>
+<%= link_to 'New Internal', new_category_internal_path %>
